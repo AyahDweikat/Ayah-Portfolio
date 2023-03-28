@@ -18,8 +18,8 @@
 }
 body {
   background-color: var(--main-bg-color);
-  background-image: url("../img/Group-27.png");
-  background-repeat: no-repeat;
+  /* background-image: url("../img/Group-27.png"); */
+  /* background-repeat: no-repeat; */
   margin: 0;
 }
 /* Navbar */
@@ -107,6 +107,7 @@ li {
 }
 /* Header */
 .home {
+  background-image: url("../img/Group-27.png");
   background-color: var(--main-bg-color);
   height: 100vh;
   display: flex;
