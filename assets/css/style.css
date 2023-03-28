@@ -1,16 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap");
-@imporcontact-btnt url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@600&display=swap'); */
 
 :root {
-  /* --mainColor : #313552; */
-  /* --secondaryColor :#554ca3; */
-  --main-bg-color: #1f2128;
-  --secondary-bg-color: #3a3c46;
+  --hover-bg-color: #3a3c46;
+  --hover-secondary-bg-color: #434c7c;
+  /*  // main #2a2c47 == //#313552*/
+  --main-bg-color: #1F2235;
+  --secondary-bg-color:#2a2c47;
+
+
+
   --main-color: #ffc576;
   --main-white-color: #fff;
   --transparent-color: transparent;
   --main-font-family: "Hanken Grotesk", sans-serif;
-  --secondary-font-family: "Edu NSW ACT Foundation", cursive;
+  --secondary-font-family: cursive;
 }
 * {
   padding: 0;
@@ -43,8 +47,7 @@ nav .icon {
   padding-inline-start: 8px;
   transform: rotate(30deg);
   background-color: var(--transparent-color);
-  /*background-color: #ffc576;
-  */text-shadow: 3px 3px 3px #535050;
+  text-shadow: 3px 3px 3px #535050;
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
@@ -97,7 +100,7 @@ ul.nav-items li:last-child:hover {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--hover-bg-color);
 }
 .nav-item:hover {
   color: var(--main-color);
@@ -106,7 +109,6 @@ ul.nav-items li:last-child:hover {
 li {
   list-style-type: none;
 }
-
 /* Header */
 .home {
   background-color: var(--main-bg-color);
@@ -149,7 +151,7 @@ header.container {
   margin-block-end: 0px;
 }
 .home .title {
-    padding-left: 30px;
+  padding-left: 30px;
   color: var(--main-white-color);
   box-sizing: border-box;
   font-family: var(--secondary-font-family);
@@ -182,9 +184,86 @@ header a.contact-btn:hover {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--hover-bg-color);
 }
-
+/* About */
+section.container {
+  width: 85%;
+  margin: auto;
+}
+section.about {
+  padding: 10px 20px;
+  margin-block-end: 50px;
+  font-family: var(--main-font-family);
+  color: var(--main-white-color);
+  background-color: var(--secondary-bg-color);
+  border: 2px ridge var(--main-color) ;
+  display: flex;
+}
+.about-me {
+  width: 45%;
+  padding: 10px 40px 40px 20px;
+  border-right: 1px solid var(--main-color);
+}
+.about h2{
+  color: var(--main-color);
+  text-align: left;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  font-family: var(--secondary-font-family);
+  font-size: 40px;
+  font-weight: 600;
+  margin-block-start: 0px;
+  margin-block-end: 25px;
+  line-height: 50px;
+  letter-spacing: 1px;
+}
+.about-me p, .skills li {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  margin-block-start: 0px;
+  margin-block-end: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+}
+.about-me p {
+  width: 100%;
+}
+.about .anchors-in-paragraph {
+  color: var(--main-color);
+  box-sizing: border-box;
+  font-weight: 600;
+}
+.skills{
+  width: 55%;
+  padding: 10px 20px 40px 30px;
+}
+.skills ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.skills li {
+  font-size: 13px;
+  line-height: 28px;
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid var(--hover-secondary-bg-color);
+  background: var(--hover-secondary-bg-color);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.skills li span{
+  padding-inline-start: 4px;
+}
+.skills li i{
+  color:var(--main-color);
+}
 /* Contact */
 .contact-list {
   color: var(--main-white-color);
@@ -210,7 +289,7 @@ header a.contact-btn:hover {
   margin-inline: 5px;
 }
 .contact-me li a:hover {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--hover-bg-color);
   color: var(--main-color);
   border: 2px solid var(--main-color);
 }
@@ -342,6 +421,61 @@ header a.contact-btn:hover {
     margin-block-start: 20px;
     padding: 10px 13px;
   }
+  /* About */
+section.container {
+  width: 95%;
+  margin-inline: auto;
+  margin-block-start: 20px;
+}
+section.about {
+  padding: 10px 0px;
+  margin-block-end: 50px;
+  border: 2px ridge var(--main-color) ;
+  display: flex;
+  flex-direction: column;
+}
+.about-me {
+  width: 100%;
+  padding: 10px 0px 40px;
+  border-right: 0px;
+}
+.about h2{
+  padding-inline-start: 16px;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 600;
+  margin-block-start: 0px;
+  margin-block-end: 25px;
+  line-height: 45px;
+  letter-spacing: 1px;
+}
+.about-me p, .skills li {
+  font-size: 12px;
+  margin: 0px;
+  text-align: justify;
+  margin-block-start: 0px;
+  margin-block-end: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+.about-me p {
+  width: 95%;
+  margin: auto;
+  padding-inline: 10px;
+}
+.skills{
+  width: 95%;
+  margin: auto;
+  padding: 10px 0px 40px;
+}
+.skills li {
+  font-size: 13px;
+  padding: 8px;
+  margin: 5px;
+}
+.skills li span{
+  padding-inline-start: 4px;
+}
 }
 @media screen and (min-width: 350px) and (max-width: 560px) {
   /* Navbar */
@@ -425,6 +559,61 @@ header a.contact-btn:hover {
     margin-inline-start: 30px;
     margin-block-start: 30px;
     padding: 13px 15px;
+  }
+  /* Home */
+  section.container {
+    width: 95%;
+    margin-inline: auto;
+    margin-block-start: 20px;
+  }
+  section.about {
+    padding: 10px 0px;
+    margin-block-end: 50px;
+    border: 2px ridge var(--main-color) ;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-me {
+    width: 100%;
+    padding: 10px 0px 40px;
+    border-right: 0px;
+  }
+  .about h2{
+    padding-inline-start: 16px;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 600;
+    margin-block-start: 0px;
+    margin-block-end: 25px;
+    line-height: 45px;
+    letter-spacing: 1px;
+  }
+  .about-me p, .skills li {
+    font-size: 12px;
+    margin: 0px;
+    text-align: justify;
+    margin-block-start: 0px;
+    margin-block-end: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  .about-me p {
+    width: 95%;
+    margin: auto;
+    padding-inline: 10px;
+  }
+  .skills{
+    width: 95%;
+    margin: auto;
+    padding: 10px 0px 40px;
+  }
+  .skills li {
+    font-size: 13px;
+    padding: 8px;
+    margin: 5px;
+  }
+  .skills li span{
+    padding-inline-start: 4px;
   }
 }
 @media screen and (min-width: 560px) and (max-width: 577px) { 
@@ -514,8 +703,62 @@ header a.contact-btn:hover {
     margin-block-start: 30px;
     padding: 13px 15px;
   }
+  /* About */
+  section.container {
+    width: 95%;
+    margin-inline: auto;
+    margin-block-start: 20px;
+  }
+  section.about {
+    padding: 10px 0px;
+    margin-block-end: 50px;
+    border: 2px ridge var(--main-color) ;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-me {
+    width: 100%;
+    padding: 10px 0px 40px;
+    border-right: 0px;
+  }
+  .about h2{
+    padding-inline-start: 16px;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 600;
+    margin-block-start: 0px;
+    margin-block-end: 25px;
+    line-height: 45px;
+    letter-spacing: 1px;
+  }
+  .about-me p, .skills li {
+    font-size: 12px;
+    margin: 0px;
+    text-align: justify;
+    margin-block-start: 0px;
+    margin-block-end: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  .about-me p {
+    width: 95%;
+    margin: auto;
+    padding-inline: 10px;
+  }
+  .skills{
+    width: 95%;
+    margin: auto;
+    padding: 10px 0px 40px;
+  }
+  .skills li {
+    font-size: 13px;
+    padding: 8px;
+    margin: 5px;
+  }
+  .skills li span{
+    padding-inline-start: 4px;
+  }
 }
-
 @media screen and (min-width: 577px) and (max-width: 767px) {
   /* Navbar */
   nav {
@@ -564,7 +807,7 @@ header a.contact-btn:hover {
   .home .top-title {
     padding-inline-start: 20px;
     color: var(--main-color);
-    font-size: 40px;
+    font-size: 28px;
     margin-block-end: 15px;
   }
   .home .desc {
@@ -574,14 +817,69 @@ header a.contact-btn:hover {
     margin-block-end: 0px;
   }
   .home .title {
-    font-size: 70px;
+    font-size: 34px;
     font-weight: 500;
     padding-inline-start: 20px;
     margin-block-start: 10px;
-    margin-block-end: 45px;
+    margin-block-end: 35px;
     line-height: 100px;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     width: 100%;
+  }
+  /* About */
+  section.container {
+    width: 98%;
+    margin-inline: auto;
+    margin-block-start: 20px;
+  }
+  section.about {
+    padding: 10px 0px;
+    margin-block-end: 50px;
+    border: 2px ridge var(--main-color) ;
+    display: flex;
+    flex-direction: row;
+  }
+  .about-me {
+    width: 100%;
+    padding: 10px 5px 40px;
+    border-right: 0px;
+  }
+  .about h2{
+    padding-inline-start: 16px;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 600;
+    margin-block-start: 0px;
+    margin-block-end: 25px;
+    line-height: 45px;
+    letter-spacing: 1px;
+  }
+  .about-me p, .skills li {
+    font-size: 14px;
+    margin: 0px;
+    text-align: justify;
+    margin-block-start: 0px;
+    margin-block-end: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  .about-me p {
+    width: 95%;
+    margin: auto;
+    padding-inline: 10px;
+  }
+  .skills{
+    width: 95%;
+    margin: 0;
+    padding: 10px 5px 40px;
+  }
+  .skills li {
+    font-size: 12px;
+    padding: 4px;
+    margin: 5px;
+  }
+  .skills li span{
+    padding-inline-start: 4px;
   }
 }
 @media screen and (min-width: 767px) and (max-width: 991px) {
@@ -630,5 +928,60 @@ header a.contact-btn:hover {
   }
   .home .title {
     font-size: 80px;
+  }
+  /* About */
+  section.container {
+    width: 98%;
+    margin-inline: auto;
+    margin-block-start: 20px;
+  }
+  section.about {
+    padding: 10px 0px;
+    margin-block-end: 50px;
+    border: 2px ridge var(--main-color) ;
+    display: flex;
+    flex-direction: row;
+  }
+  .about-me {
+    width: 100%;
+    padding: 10px 5px 40px;
+    border-right: 0px;
+  }
+  .about h2{
+    padding-inline-start: 16px;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 600;
+    margin-block-start: 0px;
+    margin-block-end: 25px;
+    line-height: 45px;
+    letter-spacing: 1px;
+  }
+  .about-me p, .skills li {
+    font-size: 14px;
+    margin: 0px;
+    text-align: justify;
+    margin-block-start: 0px;
+    margin-block-end: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  .about-me p {
+    width: 95%;
+    margin: auto;
+    padding-inline: 10px;
+  }
+  .skills{
+    width: 95%;
+    margin: 0;
+    padding: 10px 5px 40px;
+  }
+  .skills li {
+    font-size: 12px;
+    padding: 4px;
+    margin: 5px;
+  }
+  .skills li span{
+    padding-inline-start: 4px;
   }
 }
