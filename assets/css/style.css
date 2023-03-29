@@ -4,8 +4,11 @@
 :root {
   --hover-bg-color: #3a3c46;
   --hover-secondary-bg-color: #434c7c;
-  --main-bg-color: #1F2235;
-  --secondary-bg-color:#2a2c47;
+  /* --main-bg-color: #1F2235;
+  --secondary-bg-color:#2a2c47; */
+
+  --main-bg-color: #2a2c47;
+  --secondary-bg-color:#1F2235 ;
   --main-color: #ffc576;
   --main-white-color: #fff;
   --transparent-color: transparent;
@@ -18,8 +21,6 @@
 }
 body {
   background-color: var(--main-bg-color);
-  /* background-image: url("../img/Group-27.png"); */
-  /* background-repeat: no-repeat; */
   margin: 0;
 }
 /* Navbar */
@@ -262,6 +263,115 @@ section.about {
   color:var(--main-color);
 }
 /* Contact */
+footer{
+  padding: 0;
+  margin: 0;
+}
+footer .container {
+  padding-block: 50px;
+  width: 85%;
+  margin: auto;
+}
+.contact h2{
+  color: var(--main-color);
+  text-align: center;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  font-family: var(--secondary-font-family);
+  font-size: 40px;
+  font-weight: 600;
+  margin-block-start: 0px;
+  margin-block-end: 25px;
+  line-height: 50px;
+  letter-spacing: 1px;
+}
+.contact p {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-block-start: 0px;
+  margin-block-end: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+  font-family: var(--main-font-family);
+  color: var(--main-white-color);
+}
+.contact-sections{
+  display: flex;
+  justify-content: space-between;
+}
+.contact-form{
+  width: 50%;
+  padding:10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.name-email-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.name-email-input label {
+  width: 48%;
+  padding: 0;
+  margin: 0;
+}
+.contact-form .name-email-input input {
+  width: 100%;
+}
+.contact-form input.subject-input {
+  width: 100%;
+}
+.contact-form input, .contact-form textarea {
+  padding-inline: 10px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding-block: 12px;
+  background-color:var(--hover-secondary-bg-color);
+  margin-block: 8px;
+}
+input:focus-visible, textarea:focus-visible {
+  border-bottom:2px solid var(--main-color);
+  outline: none;
+}
+input:placeholder-shown, textarea:placeholder-shown {
+  color: var(--main-white-color);
+}
+input, textarea{
+  color: var(--main-white-color);
+  font-family: var(--main-font-family);
+}
+input::placeholder, textarea::placeholder{
+  padding: 0;
+  margin: 0;
+  color: #cabebe;
+  font-family: var(--main-font-family);
+}
+button {
+  font-size: 14px;
+  width: 30%;
+  padding: 20px;
+  align-self: center;
+  margin-block-start: 15px;
+  color: var(--main-color);
+  font-weight: 600;
+  background-color:var(--hover-secondary-bg-color);
+  transition-property: background-color;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+}
+button:hover, button:active {
+  background: var(--main-color);
+  color: var(--secondary-bg-color);
+}
+.contact-me {
+  height: 100%;
+  width: 50%;
+  align-self: flex-end;
+  padding-bottom: 150px;
+  justify-self: flex-end;
+}
 .contact-list {
   color: var(--main-white-color);
 }
@@ -474,6 +584,37 @@ section.about {
 .skills li span{
   padding-inline-start: 4px;
 }
+footer .container {
+  padding-block: 50px 10px;
+  width: 85%;
+  margin: auto;
+}
+.contact-sections{
+  display: flex;
+  flex-direction: column;
+}
+.contact-form{
+  width: 100%;
+}
+.contact-me {
+  height: 100%;
+  width:fit-content;
+  padding-top: 50px;
+  align-self: center;
+  padding-bottom: 10px;
+  justify-self: center;
+}
+.contact h2{
+  font-size: 35px;
+}
+.contact p {
+  font-size: 16px;
+}
+button {
+  font-size: 10px;
+  width: 40%;
+  padding: 10px;
+}
 }
 @media screen and (min-width: 350px) and (max-width: 560px) {
   /* Navbar */
@@ -614,6 +755,37 @@ section.about {
   .skills li span{
     padding-inline-start: 4px;
   }
+  footer .container {
+  padding-block: 50px 10px;
+  width: 85%;
+  margin: auto;
+}
+.contact-sections{
+  display: flex;
+  flex-direction: column;
+}
+.contact-form{
+  width: 100%;
+}
+.contact-me {
+  height: 100%;
+  width:fit-content;
+  padding-top: 50px;
+  align-self: center;
+  padding-bottom: 10px;
+  justify-self: center;
+}
+.contact h2{
+  font-size: 35px;
+}
+.contact p {
+  font-size: 16px;
+}
+button {
+  font-size: 10px;
+  width: 40%;
+  padding: 10px;
+}
 }
 @media screen and (min-width: 560px) and (max-width: 577px) { 
   /* Navbar */
@@ -758,6 +930,37 @@ section.about {
   .skills li span{
     padding-inline-start: 4px;
   }
+  footer .container {
+  padding-block: 50px 10px;
+  width: 85%;
+  margin: auto;
+}
+.contact-sections{
+  display: flex;
+  flex-direction: column;
+}
+.contact-form{
+  width: 100%;
+}
+.contact-me {
+  height: 100%;
+  width:fit-content;
+  padding-top: 50px;
+  align-self: center;
+  padding-bottom: 10px;
+  justify-self: center;
+}
+.contact h2{
+  font-size: 35px;
+}
+.contact p {
+  font-size: 16px;
+}
+button {
+  font-size: 10px;
+  width: 40%;
+  padding: 10px;
+}
 }
 @media screen and (min-width: 577px) and (max-width: 767px) {
   /* Navbar */
@@ -884,6 +1087,37 @@ section.about {
   .skills li span{
     padding-inline-start: 4px;
   }
+  footer .container {
+  padding-block: 50px 10px;
+  width: 85%;
+  margin: auto;
+}
+.contact-sections{
+  display: flex;
+  flex-direction: column;
+}
+.contact-form{
+  width: 100%;
+}
+.contact-me {
+  height: 100%;
+  width:fit-content;
+  padding-top: 50px;
+  align-self: center;
+  padding-bottom: 10px;
+  justify-self: center;
+}
+.contact h2{
+  font-size: 35px;
+}
+.contact p {
+  font-size: 16px;
+}
+button {
+  font-size: 10px;
+  width: 40%;
+  padding: 10px;
+}
 }
 @media screen and (min-width: 767px) and (max-width: 991px) {
   /* Navbar */
@@ -990,4 +1224,25 @@ section.about {
   .skills li span{
     padding-inline-start: 4px;
   }
+  footer .container {
+  padding-block: 50px 10px;
+}
+.contact-sections{
+  display: flex;
+  flex-direction: column;
+}
+.contact-form{
+  width: 80%;
+  margin: auto;
+}
+.contact-me {
+  height: 100%;
+  width:fit-content;
+  padding-top: 50px;
+  align-self: center;
+  padding-bottom: 10px;
+  justify-self: center;
+}
+
+
 }
