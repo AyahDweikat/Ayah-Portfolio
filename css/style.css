@@ -4,11 +4,11 @@
 :root {
   --hover-bg-color: #3a3c46;
   --hover-secondary-bg-color: #434c7c;
-  /* --main-bg-color: #1F2235;
-  --secondary-bg-color:#2a2c47; */
+  --main-bg-color: #1F2235;
+  --secondary-bg-color:#2a2c47;
 
-  --main-bg-color: #2a2c47;
-  --secondary-bg-color:#1F2235 ;
+  /* --main-bg-color: #2a2c47; */
+  /* --secondary-bg-color:#1F2235 ; */
   --main-color: #ffc576;
   --main-white-color: #fff;
   --transparent-color: transparent;
@@ -114,8 +114,8 @@ li {
   display: flex;
   justify-content: space-between;
 }
-header.container {
-  width: 85%;
+header .container {
+  width: 70%;
   margin: auto;
 }
 .header-info {
