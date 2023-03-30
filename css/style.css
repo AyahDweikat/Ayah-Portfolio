@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap");
 
-
-
 :root {
   --hover-bg-color: hsl(231, 9%, 25%);
   --hover-secondary-bg-color: hsl(231, 30%, 37%);
@@ -11,7 +9,7 @@
   --main-white-color: hsl(0, 0%, 100%);
   --transparent-color: transparent;
   --main-font-family: "Hanken Grotesk", sans-serif;
-  --secondary-font-family: cursive;
+  --secondary-font-family: 'cursive';
 }
 * {
   padding: 0;
@@ -29,7 +27,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--transparent-color);
+  background-color: var(--main-bg-color);
   height: 80px;
   color: var(--main-white-color);
 }
