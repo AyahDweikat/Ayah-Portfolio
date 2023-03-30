@@ -319,6 +319,11 @@ article .container {
   }
   /* Hero Section */
   section .container {
+    padding-top: 60px;
+    width: 80%;
+    margin: auto;
+  }
+  section .container {
     width: 70%;
     margin-inline: auto;
   }
@@ -470,6 +475,7 @@ article .container {
   }
   /* Hero Section */
   section .container {
+    padding-top: 5px;
     width: 70%;
     margin-inline: auto;
   }
