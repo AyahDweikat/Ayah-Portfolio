@@ -93,10 +93,16 @@ li {
 }
 /* Hero Section */
 .home {
+  margin-top: -80px;
   background-image: url("../assets/imgs/BG-Img-HeroSection.png");
   background-color: var(--hover-main-bg-color);
   background-size: cover;
-  height: calc(100vh-80px);
+  height: 100vh;
+}
+section .container {
+  padding-top: 160px;
+  width: 80%;
+  margin: auto;
 }
 section .container {
   width: 80%;
