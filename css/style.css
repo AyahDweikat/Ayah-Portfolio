@@ -330,7 +330,7 @@ article .container {
   box-sizing: border-box;
   margin: 0px;
   padding-block: 12px;
-  background-color: var(--hover-secondary-bg-color);
+  background-color:var(--secondary-bg-color);
   margin-block: 8px;
 }
 input:focus-visible,
@@ -349,7 +349,6 @@ textarea {
 }
 input::placeholder,
 textarea::placeholder {
-  background-color:var(--secondary-bg-color);
   margin-block: 8px;
 }
 input:focus-visible, textarea:focus-visible {
