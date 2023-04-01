@@ -6,6 +6,7 @@
   --main-bg-color: hsl(231, 30%, 37%);
   --secondary-bg-color: hsl(236, 26%, 16%);
   --main-color: hsl(35, 100%, 73%);
+  --secondary-color:hsl(234, 38%, 10%);;
   --main-white-color: hsl(0, 0%, 100%);
   --transparent-color: transparent;
   --main-font-family: "Hanken Grotesk", sans-serif;
@@ -16,7 +17,7 @@
   margin: 0;
 }
 body {
-  background-color: var(--main-bg-color);
+  background-color: var(--hover-secondary-bg-color);
   margin: 0;
 }
 /* Navbar */
@@ -462,6 +463,119 @@ button:hover, button:active {
   line-height: 100px;
   letter-spacing: 1px;
 }
+/* Projects */
+.projects .container {
+  display: flex;
+  flex-direction: column;
+}
+.projects h2{
+  justify-self: flex-start;
+  align-self: flex-start;
+  color: var(--main-color);
+  text-align: left;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  font-family: var(--secondary-font-family);
+  font-size: 40px;
+  font-weight: 600;
+  margin-block-start: 0px;
+  margin-block-end: 25px;
+  line-height: 100px;
+  letter-spacing: 1px;
+}
+.project {
+  position: relative;
+  margin-block: 10%;
+  gap: 20px;
+  display: flex;
+}
+.project .project-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.project h3 {
+  color: var(--main-white-color);
+  font-size: 30px;
+  font-weight: 500;
+  font-family: var(--main-font-family);
+  line-height: 30px;
+  padding-block-end: 10px;
+  letter-spacing: 1px;
+}
+.project-info p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.1px;
+  padding: 10px 15px;
+  text-align: justify;
+  margin-block: 15px;
+  color: var(--main-white-color);
+  background-color: var(--secondary-bg-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.project-info p span {
+  color: var(--main-color);
+}
+.project-info .tic-stack {
+  justify-self: flex-end;
+  height: 100%;
+  color: var(--main-color);
+}
+.tic-stack span {
+  display: inline-block;
+  padding-inline: 3px;
+}
+.tic-stack span:hover {
+  display: inline-block;
+  color: var(--main-white-color);
+}
+.project-info a i{
+  font-size: 17px;
+  display: inline-block;
+  padding: 10px;
+  width: 16px;
+  height: 18px;
+  color: hsl(236, 40%, 16%);
+  color: var(--main-color);
+}
+.project-info a:hover i{
+  color: hsl(236, 40%, 16%);
+  background-color: hsl(236, 40%, 16%);
+  border: 1px solid hsl(236, 40%, 16%);
+  color: var(--main-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.projects .project .project-img{
+  border: 5px solid var(--secondary-bg-color);
+  width: 50%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+img{
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+
+
 @media screen and (max-width: 380px) {
   /* Navbar */
   header {
@@ -671,7 +785,75 @@ button:hover, button:active {
     line-height: 40px;
     letter-spacing: 1px;
   }
+    /* Projects */
+.projects .container {
+  display: flex;
+  flex-direction: column;
 }
+.projects h2{
+  font-size: 30px;
+  font-weight: 600;
+  margin-block-start: 0px;
+  margin-block-end: 25px;
+  line-height: 40px;
+  letter-spacing: 1px;
+}
+.project {
+  margin-block: 50px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.project .project-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-bg-color);
+  padding: 10px 15px;
+}
+.project h3 {
+  color: var(--main-white-color);
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--main-font-family);
+  line-height: 25px;
+  padding-block-end: 10px;
+  letter-spacing: 1px;
+}
+.project-info p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 10px 0px;
+  margin-block: 5px;
+}
+.project-info .tic-stack {
+  justify-self: flex-end;
+  font-size: 14px;
+  height: 100%;
+  color: var(--main-color);
+}
+.tic-stack span {
+  display: inline-block;
+  padding-inline: 3px;
+}
+.project-info a i{
+  font-size: 12px;
+  padding: 5px;
+  width: 16px;
+  height: 18px;
+}
+.projects .project .project-img{
+  width: 100%;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
+}
+
+
+
 @media screen and (min-width: 380px) and (max-width: 577px) {
   /* Navbar */
   header {
@@ -878,6 +1060,71 @@ button:hover, button:active {
     line-height: 40px;
     letter-spacing: 1px;
   }
+  /* Projects */
+.projects .container {
+  display: flex;
+  flex-direction: column;
+}
+.projects h2{
+  font-size: 30px;
+  font-weight: 600;
+  margin-block-start: 0px;
+  margin-block-end: 25px;
+  line-height: 40px;
+  letter-spacing: 1px;
+}
+.project {
+  margin-block: 50px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.project .project-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-bg-color);
+  padding: 10px 15px;
+}
+.project h3 {
+  color: var(--main-white-color);
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--main-font-family);
+  line-height: 25px;
+  padding-block-end: 10px;
+  letter-spacing: 1px;
+}
+.project-info p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 10px 0px;
+  margin-block: 5px;
+}
+.project-info .tic-stack {
+  justify-self: flex-end;
+  font-size: 14px;
+  height: 100%;
+  color: var(--main-color);
+}
+.tic-stack span {
+  display: inline-block;
+  padding-inline: 3px;
+}
+.project-info a i{
+  font-size: 12px;
+  padding: 5px;
+  width: 16px;
+  height: 18px;
+}
+.projects .project .project-img{
+  width: 100%;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
 }
 @media screen and (min-width: 560px) and (max-width: 577px) {
   /* Navbar */
@@ -1028,6 +1275,74 @@ button:hover, button:active {
   font-size: 12px;
   width: 30%;
   padding: 10px;
+}
+/* Projects */
+.projects .container {
+  display: flex;
+  flex-direction: column;
+}
+.projects h2{
+  font-size: 30px;
+  font-weight: 600;
+  margin-block-start: 0px;
+  margin-block-end: 25px;
+  line-height: 40px;
+  letter-spacing: 1px;
+}
+.project {
+  margin-block: 50px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.project .project-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-bg-color);
+  padding: 10px 15px;
+}
+.project h3 {
+  color: var(--main-white-color);
+  font-size: 25px;
+  font-weight: 500;
+  font-family: var(--main-font-family);
+  line-height: 25px;
+  padding-block-end: 10px;
+  letter-spacing: 1px;
+}
+.project-info p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 10px 0px;
+  margin-block: 10px;
+  background-color: var(--secondary-bg-color);
+}
+.project-info .tic-stack {
+  justify-self: flex-end;
+  height: 100%;
+  color: var(--main-color);
+}
+.tic-stack span {
+  display: inline-block;
+  padding-inline: 3px;
+}
+.project-info a i{
+  font-size: 14px;
+  display: inline-block;
+  padding: 10px;
+  width: 16px;
+  height: 18px;
+  color: hsl(236, 40%, 16%);
+  color: var(--main-color);
+}
+.projects .project .project-img{
+  width: 100%;
+}
+img{
+  height: 100%;
+  width: 100%;
 }
 }
 @media screen and (min-width: 770px) and (max-width: 1100px) {
