@@ -210,7 +210,7 @@ section a.contact-btn {
 }
 /* About Section */
 section.about {
-  padding-top: 100px;
+  padding-top: 0px;
   padding-bottom: 60px;
   height: calc(100vh-80px);
 }
@@ -291,7 +291,7 @@ section .container {
 }
 /* Contact */
 .contact {
-  padding-top: 30px;
+  padding-top: 0px;
 }
 .contact .container {
   padding-block: 50px;
@@ -583,7 +583,7 @@ button:hover, button:active {
   }
   /* About Section */
   section.about {
-    padding-top: 130px;
+    padding-top: 170px;
     padding-bottom: 60px;
     height: calc(100vh - 80px);
   }
@@ -637,7 +637,7 @@ button:hover, button:active {
   }
   /* Contact */
   .contact .container {
-    padding-block: 50px 10px;
+    padding-block: 530px 10px;
     width: 75%;
     margin: auto;
   }
@@ -669,7 +669,7 @@ button:hover, button:active {
   }
   /* Contact List Fixed */
   .contact-list {
-    position: fixed;
+    position: static;
     bottom: 30px;
     left: 0px;
     width: 40px;
@@ -881,7 +881,7 @@ button:hover, button:active {
   }
   /* Contact */
   .contact .container {
-    padding-block: 50px 10px;
+    padding-block: 0px 10px;
     width: 78%;
     margin: auto;
   }
@@ -915,7 +915,7 @@ button:hover, button:active {
   .contact-list {
     position: fixed;
     bottom: 30px;
-    left: 0px;
+    left: 5px;
     width: 40px;
   }
   .contact-list li a {
@@ -1047,7 +1047,7 @@ button:hover, button:active {
   }
   /* Contact */
 .contact .container {
-  padding-block: 50px 10px;
+  padding-block: 200px 10px;
   width: 85%;
   max-width:466px;
   margin: auto;
@@ -1173,7 +1173,7 @@ button:hover, button:active {
   }
   /* Contact */
   .contact .container {
-    padding-block: 50px 10px;
+    padding-block: 10px 10px;
   }
   .contact-sections{
     display: flex;
