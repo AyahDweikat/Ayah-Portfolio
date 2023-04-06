@@ -17,7 +17,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: var(--secondary-font-family);
+  font-family: var(--main-font-family);
 }
 body {
   background-color: var(--hover-secondary-bg-color);
@@ -33,7 +33,6 @@ header {
   left: 0;
   right: 0;
   background-color: var(--main-bg-color);
-  background-color: var(--hover-secondary-bg-color);
   height: 80px;
   color: var(--main-white-color);
 }
@@ -210,12 +209,12 @@ section a.contact-btn {
   background-color: var(--main-color);
 }
 /* About Section */
-article.about {
+section.about {
   padding-top: 100px;
   padding-bottom: 60px;
   height: calc(100vh-80px);
 }
-article .container {
+section .container {
   width: 80%;
   margin: auto;
 }
@@ -340,14 +339,88 @@ article .container {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
   }
-  /* About Section */
-  article.about {
-    padding-top: 100px;
-    padding-bottom: 60px;
-    height: calc(100vh-80px);
+  /* Hero Section */
+  section .container {
+    padding-top: 0px;
+    width: 80%;
+    margin: auto;
   }
-  article .container {
+  section .container {
+    width: 80%;
+    margin-inline: auto;
+  }
+  .home .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-info {
+    margin-top: 10px;
+    text-align: left;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .own-img {
+    width: 100%;
+    width: 300px;
+    max-width: 300px;
+    align-self: center;
+    padding-inline-end: 10px;
+    padding-block-start: 20px;
+    margin-block-end: 30px;
+  }
+  .own-img img {
+    height: 100%;
+    width: 100%;
+  }
+  .home p {
+    margin-block-start: 0px;
+    line-height: 27.2px;
+    letter-spacing: 0.1px;
+  }
+  .home .top-title {
+    font-size: 20px;
+    margin-block-end: 0px;
+  }
+  .home .desc {
+    font-size: 18px;
+    margin-block-end: 0px;
+  }
+  .home .title {
+    font-size: 28px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    width: 100%;
+  }
+  section a.contact-btn {
+    align-self: flex-start;
+    margin-inline-start: 0px;
+    margin-block: 10px;
+    padding: 15px 20px;
+  }
+  ul.nav-list li:last-child a {
+    padding: 2px 5px;
+    margin-inline: 0px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  /* About Section */
+  section.about {
+    padding-top: 130px;
+    padding-bottom: 60px;
+    height: calc(100vh - 80px);
+  }
+  section.about .container {
+    width: 90%;
     margin: auto;
   }
   .about-sections{
@@ -358,8 +431,8 @@ article .container {
   }
   .about-me {
     padding: 20px 15px 15px;
-    width: 70%;
-    margin: auto;
+    width:100%;
+    margin: 0;
     background-color: var(--secondary-bg-color);
   }
   .about h2{
@@ -367,12 +440,12 @@ article .container {
     text-align: left;
     font-size: 30px;
     margin-block-start: 0px;
-    margin-block-end: 25px;
+    margin-block-end: 10px;
     line-height: 45px;
     letter-spacing: 1px;
   }
   .about-me p, .skills li {
-    font-size: 12px;
+    font-size: 10px;
     margin-block-start: 0px;
     margin-block-end: 20px;
     line-height: 17px;
@@ -382,8 +455,8 @@ article .container {
     width: 100%;
   }
   .skills{
-    width: 70%;
-    margin: auto;
+    width: 100%;
+    margin: 0;
     padding: 20px 15px 15px;
   }
   .skills li {
@@ -395,9 +468,6 @@ article .container {
     padding-inline-start: 4px;
   }
 }
-
-
-
 @media screen and (min-width: 380px) and (max-width: 577px) {
   /* Navbar */
   header {
@@ -455,6 +525,17 @@ article .container {
     box-sizing: border-box;
     font-size: 12px;
   }
+  section .container {
+    padding-top: 5px;
+    width: 70%;
+    margin-inline: auto;
+  }
+  .home .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
   .header-info {
     margin-top: 10px;
     text-align: left;
@@ -496,11 +577,29 @@ article .container {
     letter-spacing: 1px;
     width: 100%;
   }
-  header a.contact-btn {
+  section a.contact-btn {
     align-self: flex-start;
-    margin-inline-start: 30px;
-    margin-block-start: 30px;
-    padding: 13px 15px;
+    margin-inline-start: 0px;
+    margin-block: 30px;
+    padding: 15px 20px;
+  }
+  ul.nav-list li:last-child a {
+    padding: 2px 5px;
+    margin-inline: 0px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  ul.nav-list li a {
+    padding: 4px 4px;
+    margin-inline: 0px;
+    color: var(--main-white-color);
+    box-sizing: border-box;
+    font-size: 12px;
   }
   ul.nav-list li:last-child a {
     padding: 4px 6px;
@@ -514,13 +613,12 @@ article .container {
     -o-border-radius: 10px;
   }
   /* About Section */
-  article.about {
-    padding-top: 100px;
+  section.about {
+    padding-top: 250px;
     padding-bottom: 60px;
-    height: calc(100vh-80px);
   }
-  article .container {
-    width: 100%;
+  section.about .container {
+    width: 80%;
     margin: auto;
   }
   .about-sections{
@@ -531,7 +629,7 @@ article .container {
   }
   .about-me {
     padding: 20px 15px 15px;
-    width: 70%;
+    width: 100%;
     margin: auto;
     background-color: var(--secondary-bg-color);
   }
@@ -555,7 +653,7 @@ article .container {
     width: 100%;
   }
   .skills{
-    width: 70%;
+    width: 100%;
     margin: auto;
     padding: 20px 15px 15px;
   }
@@ -632,14 +730,16 @@ article .container {
     padding: 15px 20px;
   }
   /* About Section */
-  article.about {
-    padding-top: 100px;
+  section.about {
+    padding-bottom: 20px;
+    padding-top: 0px;
     padding-bottom: 10px;
-    height: calc(100vh-80px);
+    height: calc(100vh - 80px);
   }
-  article .container {
+  section.about .container {
     width: 100%;
     margin: auto;
+    padding-top: 50px;
   }
   .about-sections{
     display: flex;
@@ -685,107 +785,6 @@ article .container {
   .skills li span{
     padding-inline-start: 4px;
   }
-  /* Contact */
-.contact .container {
-  padding-block: 50px 10px;
-  width: 85%;
-  max-width:466px;
-  margin: auto;
-}
-.contact-sections{
-  display: flex;
-  flex-direction: column;
-}
-.contact-form{
-  width: 100%;
-}
-.contact-me {
-  height: 100%;
-  width:fit-content;
-  padding-top: 50px;
-  align-self: center;
-  padding-bottom: 10px;
-  justify-self: center;
-}
-.contact h2{
-  font-size: 35px;
-}
-.contact p {
-  font-size: 16px;
-}
-.contact button {
-  font-size: 12px;
-  width: 30%;
-  padding: 10px;
-}
-/* Projects */
-.projects .container {
-  display: flex;
-  flex-direction: column;
-}
-.projects h2{
-  font-size: 30px;
-  font-weight: 600;
-  margin-block-start: 0px;
-  margin-block-end: 25px;
-  line-height: 40px;
-  letter-spacing: 1px;
-}
-.project {
-  margin-block: 50px;
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.project .project-info {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--secondary-bg-color);
-  padding: 10px 15px;
-}
-.project h3 {
-  color: var(--main-white-color);
-  font-size: 25px;
-  font-weight: 500;
-  font-family: var(--main-font-family);
-  line-height: 25px;
-  padding-block-end: 10px;
-  letter-spacing: 1px;
-}
-.project-info p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  padding: 10px 0px;
-  margin-block: 10px;
-  background-color: var(--secondary-bg-color);
-}
-.project-info .tic-stack {
-  justify-self: flex-end;
-  height: 100%;
-  color: var(--main-color);
-}
-.tic-stack span {
-  display: inline-block;
-  padding-inline: 3px;
-}
-.project-info a i{
-  font-size: 14px;
-  display: inline-block;
-  padding: 10px;
-  width: 16px;
-  height: 18px;
-  color: hsl(236, 40%, 16%);
-  color: var(--main-color);
-}
-.projects .project .project-img{
-  width: 100%;
-}
-img{
-  height: 100%;
-  width: 100%;
-}
 }
 @media screen and (min-width: 770px) and (max-width: 1100px) {
   .home .top-title {
@@ -805,12 +804,11 @@ img{
     width: 100%;
   }
   /* About Section */
-  article.about {
-    padding-top: 100px;
+  section.about {
+    padding-top: 0px;
     padding-bottom: 60px;
-    height: calc(100vh-80px);
   }
-  article .container {
+  section .container {
     width: 85%;
     margin: auto;
   }
