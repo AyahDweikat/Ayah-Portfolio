@@ -335,7 +335,7 @@ section.about {
   flex-direction: row;
   justify-content: space-between;
 }
-.name-email-input label {
+.name-email-input .control-form {
   width: 48%;
   padding: 0;
   margin: 0;
@@ -349,15 +349,35 @@ section.about {
 .contact-form input,
 .contact-form textarea {
   padding-inline: 10px;
+  width: 100%;
   box-sizing: border-box;
   margin: 0px;
   padding-block: 12px;
   background-color: var(--secondary-bg-color);
   margin-block: 8px;
 }
-input:focus-visible,
-textarea:focus-visible {
-  border-bottom: 2px solid var(--main-color);
+.control-form{
+  position: relative;
+}
+.control-form label {
+  position: absolute;
+  font-family: var(--main-font-family);
+  font-size: 14px;
+  top: 15px;
+  left: 15px;
+  color: #cabebe;
+  display: block;
+  padding-inline: 5px;
+  background-color: var(--transparent-color);
+}
+.control-form input:focus-visible + label, .control-form textarea:focus-visible + label {
+  position: absolute;
+  background-color: var(--hover-secondary-bg-color);
+  top: 0;
+  left: 15px;
+}
+input:focus-visible, textarea:focus-visible {
+  border:2px solid var(--main-color);
   outline: none;
 }
 input:placeholder-shown,
@@ -370,13 +390,11 @@ textarea {
   font-family: var(--main-font-family);
   border: 0px;
 }
-input::placeholder,
-textarea::placeholder {
-  padding: 0;
-  margin: 0;
-  color: #cabebe;
-  font-family: var(--main-font-family);
+input::placeholder, textarea::placeholder{
+  color: var(--transparent-color);
 }
+
+
 .contact button {
   border: 0px;
   font-size: 15px;
@@ -394,12 +412,9 @@ button:active {
   color: var(--main-color);
   border: 1px solid var(--main-color);
 }
-
-.contact-list {
-  color: var(--main-white-color);
-}
 /* Contact List Fixed */
 .contact-list {
+  color: var(--main-white-color);
   position: fixed;
   bottom: 30px;
   left: 10px;
@@ -734,7 +749,7 @@ img {
   .contact-form {
     width: 100%;
   }
-  .contact h2 {
+  .contact h2{
     font-size: 35px;
     margin-block-end: 10px;
   }
@@ -1081,7 +1096,7 @@ img {
   .contact-form {
     width: 100%;
   }
-  .contact h2 {
+  .contact h2{
     font-size: 35px;
   }
   .contact p {
