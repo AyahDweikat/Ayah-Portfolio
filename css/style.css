@@ -352,9 +352,9 @@ section.about {
   width: 100%;
   box-sizing: border-box;
   margin: 0px;
-  padding-block: 12px;
-  background-color: var(--secondary-bg-color);
-  margin-block: 8px;
+  padding-block: 15px;
+  background-color:var(--secondary-bg-color);
+  margin-block: 10px;
 }
 .control-form{
   position: relative;
@@ -370,14 +370,16 @@ section.about {
   padding-inline: 5px;
   background-color: var(--transparent-color);
 }
-.control-form input:focus-visible + label, .control-form textarea:focus-visible + label {
+.control-form input:focus-visible + label, 
+.control-form textarea:focus-visible + label, 
+.control-form input:not(:placeholder-shown) + label,
+.control-form textarea:not(:placeholder-shown) + label {
   position: absolute;
-  background-color: var(--hover-secondary-bg-color);
   top: 0;
   left: 15px;
 }
 input:focus-visible, textarea:focus-visible {
-  border:2px solid var(--main-color);
+  border-bottom:2px solid var(--main-color);
   outline: none;
 }
 input:placeholder-shown,
