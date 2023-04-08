@@ -323,10 +323,6 @@ section .container {
   font-family: var(--main-font-family);
   color: var(--main-white-color);
 }
-.contact-sections{
-  display: flex;
-  justify-content: space-between;
-}
 .contact-form{
   width: 50%;
   margin-inline: auto;
@@ -340,7 +336,7 @@ section .container {
   flex-direction: row;
   justify-content: space-between;
 }
-.name-email-input label {
+.name-email-input .control-form {
   width: 48%;
   padding: 0;
   margin: 0;
@@ -353,14 +349,35 @@ section .container {
 }
 .contact-form input, .contact-form textarea {
   padding-inline: 10px;
+  width: 100%;
   box-sizing: border-box;
   margin: 0px;
   padding-block: 12px;
   background-color:var(--secondary-bg-color);
   margin-block: 8px;
 }
+.control-form{
+  position: relative;
+}
+.control-form label {
+  position: absolute;
+  font-family: var(--main-font-family);
+  font-size: 14px;
+  top: 15px;
+  left: 15px;
+  color: #cabebe;
+  display: block;
+  padding-inline: 5px;
+  background-color: var(--transparent-color);
+}
+.control-form input:focus-visible + label, .control-form textarea:focus-visible + label {
+  position: absolute;
+  background-color: var(--hover-secondary-bg-color);
+  top: 0;
+  left: 15px;
+}
 input:focus-visible, textarea:focus-visible {
-  border-bottom:2px solid var(--main-color);
+  border:2px solid var(--main-color);
   outline: none;
 }
 input:placeholder-shown, textarea:placeholder-shown {
@@ -372,11 +389,10 @@ input, textarea{
   border: 0px;
 }
 input::placeholder, textarea::placeholder{
-  padding: 0;
-  margin: 0;
-  color: #cabebe;
-  font-family: var(--main-font-family);
+  color: var(--transparent-color);
 }
+
+
 .contact button {
   border: 0px;
   font-size: 14px;
@@ -393,43 +409,9 @@ button:hover, button:active {
   color: var(--main-color);
   border: 1px solid var(--main-color);
 }
-.contact-me {
-  height: 100%;
-  width: 50%;
-  align-self: flex-end;
-  padding-bottom: 150px;
-  justify-self: flex-end;
-}
-.contact-list {
-  color: var(--main-white-color);
-}
-.contact-me ul {
-  display: flex;
-  justify-content: center;
-}
-.contact-me li a {
-  font-size: 17px;
-  display: inline-block;
-  padding: 10px;
-  width: 16px;
-  height: 18px;
-  color: var(--main-white-color);
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border: 2px solid var(--main-white-color);
-  text-align: center;
-  margin-inline: 5px;
-}
-.contact-me li a:hover {
-  background-color: var(--hover-bg-color);
-  color: var(--main-color);
-  border: 2px solid var(--main-color);
-}
 /* Contact List Fixed */
 .contact-list {
+  color: var(--main-white-color);
   position: fixed;
   bottom: 30px;
   left: 10px;
@@ -647,14 +629,6 @@ button:hover, button:active {
   }
   .contact-form{
     width: 100%;
-  }
-  .contact-me {
-    height: 100%;
-    width:fit-content;
-    padding-top: 50px;
-    align-self: center;
-    padding-bottom: 10px;
-    justify-self: center;
   }
   .contact h2{
     font-size: 35px;
@@ -891,14 +865,6 @@ button:hover, button:active {
   }
   .contact-form{
     width: 100%;
-  }
-  .contact-me {
-    height: 100%;
-    width:fit-content;
-    padding-top: 50px;
-    align-self: center;
-    padding-bottom: 10px;
-    justify-self: center;
   }
   .contact h2{
     font-size: 35px;
