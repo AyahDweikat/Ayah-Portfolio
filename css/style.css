@@ -363,7 +363,7 @@ section.about {
   position: absolute;
   font-family: var(--main-font-family);
   font-size: 14px;
-  top: 15px;
+  top: 22px;
   left: 15px;
   color: #cabebe;
   display: block;
@@ -375,7 +375,7 @@ section.about {
 .control-form input:not(:placeholder-shown) + label,
 .control-form textarea:not(:placeholder-shown) + label {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 15px;
 }
 input:focus-visible, textarea:focus-visible {
