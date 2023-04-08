@@ -744,9 +744,35 @@ img {
   }
   .contact-sections {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
   }
   .contact-form {
+    width: 100%;
+    margin-inline: auto;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .name-email-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .name-email-input .control-form {
+    width: 100%;
+  }
+  .contact-form .name-email-input input {
+    width: 100%;
+  }
+  .contact-form input.subject-input {
+    width: 100%;
+  }
+
+
+
+
+  .contact-form{
     width: 100%;
   }
   .contact h2{
@@ -1096,6 +1122,20 @@ img {
   .contact-form {
     width: 100%;
   }
+  .name-email-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .name-email-input .control-form {
+    width: 100%;
+  }
+  .contact-form .name-email-input input {
+    width: 100%;
+  }
+  .contact-form input.subject-input {
+    width: 100%;
+  }
   .contact h2{
     font-size: 35px;
   }
@@ -1328,14 +1368,6 @@ img {
   }
   .contact-form {
     width: 100%;
-  }
-  .contact-me {
-    height: 100%;
-    width: fit-content;
-    padding-top: 50px;
-    align-self: center;
-    padding-bottom: 10px;
-    justify-self: center;
   }
   .contact h2 {
     font-size: 35px;
