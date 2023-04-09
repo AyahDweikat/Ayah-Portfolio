@@ -56,13 +56,19 @@ nav {
   justify-content: flex-end;
   gap: 10px;
 }
+ul.nav-list li {
+  color: var(--main-white-color);
+}
+ul.nav-list li.active {
+  color: var(--main-color);
+}
 ul.nav-list li a {
+  color: inherit;
   position: relative;
   display: inline-block;
   padding: 8px 4px;
   margin-inline: 10px;
   text-decoration: none;
-  color: var(--main-white-color);
   box-sizing: border-box;
   font-size: 15px;
   font-family: var(--main-font-family);
@@ -70,8 +76,10 @@ ul.nav-list li a {
   line-height: 30px;
   letter-spacing: 0.1px;
 }
-ul.nav-list li:first-child a {
-  color: var(--main-color);
+
+ul.nav-list li a {
+  /* color: var(--main-color); */
+  color: inherit;
 }
 ul.nav-list li a::after {
   content: " ";
@@ -590,8 +598,6 @@ img {
   li {
     list-style-type: none;
   }
-
-  /* ----------------- */
   nav {
     width: 50%;
     margin-inline-end: 2%;
@@ -649,7 +655,7 @@ img {
     margin-inline: 0px;
     font-size: 15px;
   }
-  ul.nav-list li:first-child a {
+  .active {
     color: var(--main-color);
   }
   ul.nav-list li a:hover::after{
@@ -686,6 +692,7 @@ img {
   }
   .header-info {
     margin-top: 10px;
+    padding-top: 0;
     text-align: left;
     width: 100%;
     display: flex;
