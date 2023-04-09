@@ -1,13 +1,8 @@
-$('.toggle').click(function () {
-    "use strict";
-    $('nav ul').slideToggle();
-});
-
-
-
-$(window).resize(function () {
-    "use strict";
-    if ($(window).width() > 410) {
-        $('nav ul.nav-list').removeAttr('style');
-    }
-});
+function myFunction() {
+  var x = document.getElementById("nav-list");
+  if (x.className === "nav-list") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav-list";
+  }
+}
