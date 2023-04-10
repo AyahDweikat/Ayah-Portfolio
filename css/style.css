@@ -125,7 +125,7 @@ li {
 /* Hero Section */
 .home {
   margin-top: -80px;
-  background-image: url("../assets/imgs/BG-Img-HeroSection.png");
+  background-image: url("../assets/imgs/BG-Img-HeroSection.webp");
   background-color: var(--hover-main-bg-color);
   background-size: cover;
   height: 100vh;
@@ -360,7 +360,6 @@ section.about {
   padding-inline: 10px;
   width: 100%;
   box-sizing: border-box;
-  margin: 0px;
   padding-block: 15px;
   background-color: var(--secondary-bg-color);
   margin-block: 10px;
@@ -375,8 +374,7 @@ section.about {
   top: 22px;
   left: 15px;
   color: #cabebe;
-  display: block;
-  padding-inline: 5px;
+  display: block; 
   background-color: var(--transparent-color);
 }
 .control-form input:focus-visible + label,
@@ -384,8 +382,8 @@ section.about {
 .control-form input:not(:placeholder-shown) + label,
 .control-form textarea:not(:placeholder-shown) + label {
   position: absolute;
-  top: 2px;
-  left: 15px;
+  top: 0px;
+  left: 5px;
 }
 input:focus-visible,
 textarea:focus-visible {
