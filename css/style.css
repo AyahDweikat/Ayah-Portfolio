@@ -32,7 +32,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--main-bg-color);
+  background-color: var(--hover-secondary-bg-color);
   height: 80px;
   color: var(--main-white-color);
 }
@@ -402,11 +402,9 @@ input, textarea{
 input::placeholder, textarea::placeholder{
   color: var(--transparent-color);
 }
-
-
 .contact button {
   border: 0px;
-  font-size: 14px;
+  font-size: 15px;
   width: 30%;
   padding: 20px;
   align-self: center;
@@ -419,6 +417,10 @@ button:hover, button:active {
   background: var(--hover-bg-color);
   color: var(--main-color);
   border: 1px solid var(--main-color);
+}
+
+.contact-list {
+  color: var(--main-white-color);
 }
 /* Contact List Fixed */
 .contact-list {
@@ -449,6 +451,19 @@ button:hover, button:active {
   -o-transform: scale(1.3);
   transform: scale(1.3);
   color: var(--main-color);
+}
+/* Footer */
+.copy-right {
+  text-align: center;
+  color: var(--main-white-color);
+  box-sizing: border-box;
+  font-family: var(--main-font-family);
+  font-size: 15px;
+  font-weight: 500;
+  margin-block-start: 60px;
+  margin-block-end: 0px;
+  line-height: 100px;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 380px) {
@@ -549,6 +564,9 @@ button:hover, button:active {
     width: 80%;
     margin-inline: auto;
   }
+  .home {
+    height: 510px;
+  }
   .home .container {
     display: flex;
     flex-direction: column;
@@ -605,8 +623,7 @@ button:hover, button:active {
   /* About Section */
   section.about {
     padding-top: 170px;
-    padding-bottom: 60px;
-    height: calc(100vh - 80px);
+    padding-bottom: 20px;
   }
   section.about .container {
     width: 90%;
@@ -658,7 +675,7 @@ button:hover, button:active {
   }
   /* Contact */
   .contact .container {
-    padding-block: 530px 10px;
+    padding-block: 50px 10px;
     width: 75%;
     margin: auto;
   }
@@ -688,30 +705,59 @@ button:hover, button:active {
   .contact-form input.subject-input {
     width: 100%;
   }
-
-
-
-
-  .contact-form{
-    width: 100%;
-  }
   .contact h2{
     font-size: 35px;
+    margin-block-end: 10px;
   }
   .contact p {
     font-size: 12px;
+    margin-block-end: 0px;
   }
   .contact button {
-    font-size: 10px;
-    width: 40%;
+    font-size: 14px;
+    width: 50%;
     padding: 10px;
+  }
+  .contact-sections{
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact-form{
+    width: 100%;
+    margin-inline: auto;
+    padding:10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .name-email-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .name-email-input label {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .contact-form .name-email-input input {
+    width: 100%;
+  }
+  .contact-form input.subject-input {
+    width: 100%;
   }
   /* Contact List Fixed */
   .contact-list {
+    padding-top: 20px;
     position: static;
-    bottom: 30px;
-    left: 0px;
-    width: 40px;
+    width: 50%;
+    margin: auto;
+  }
+  .contact-list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
   .contact-list li a {
     font-size: 17px;
@@ -719,6 +765,15 @@ button:hover, button:active {
     padding: 5px;
     width: 16px;
     height: 18px;
+  }
+  /* Footer */
+  .copy-right {
+    color: var(--main-white-color);
+    font-size: 10px;
+    margin-block-start: 15px;
+    margin-block-end: 0px;
+    line-height: 40px;
+    letter-spacing: 1px;
   }
 }
 @media screen and (min-width: 380px) and (max-width: 577px) {
@@ -956,7 +1011,7 @@ button:hover, button:active {
     font-size: 16px;
   }
   .contact button {
-    font-size: 10px;
+    font-size: 14px;
     width: 40%;
     padding: 10px;
   }
@@ -964,7 +1019,7 @@ button:hover, button:active {
   .contact-list {
     position: fixed;
     bottom: 30px;
-    left: 5px;
+    left: 10px;
     width: 40px;
   }
   .contact-list li a {
@@ -973,6 +1028,15 @@ button:hover, button:active {
     padding: 5px;
     width: 16px;
     height: 18px;
+  }
+  /* Footer */
+  .copy-right {
+    color: var(--main-white-color);
+    font-size: 12px;
+    margin-block-start: 30px;
+    margin-block-end: 0px;
+    line-height: 40px;
+    letter-spacing: 1px;
   }
 }
 @media screen and (min-width: 560px) and (max-width: 577px) {
@@ -1291,7 +1355,7 @@ button:hover, button:active {
     justify-self: center;
   }
   .contact button {
-    font-size: 12px;
+    font-size: 14px;
     width: 30%;
     padding: 10px;
   }
@@ -1315,7 +1379,7 @@ button:hover, button:active {
     width: 100%;
   }
   button {
-    font-size: 12px;
+    font-size: 15px;
     width: 30%;
     padding: 10px;
   }
