@@ -1350,30 +1350,10 @@ img {
       -o-border-radius:0px;
     }
 }
-@media screen and (min-width: 578px) and (max-width: 630px) {
-  /* Navbar */
-  .logo span {
-    font-size: 22px;
-  }
-  ul.nav-list li a {
-    font-size: 12px;
-  }
-  ul.nav-list li:last-child a {
-    padding: 4px 6px;
-    margin-inline: 0px;
-    border: 1px solid var(--main-color);
-    color: var(--main-color);
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-}
 @media screen and (min-width: 578px) and (max-width: 770px) {
   /* Navbar */
   .logo span {
-    font-size: 25px;
+    font-size: 20px;
   }
   ul.nav-list li a {
     font-size: 13px;
