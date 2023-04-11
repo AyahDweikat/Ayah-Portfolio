@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap");
+
 :root {
   --hover-bg-color: hsl(231, 9%, 25%);
   --hover-secondary-bg-color: hsl(236, 40%, 25%);
   --main-bg-color: hsl(231, 30%, 37%);
   --secondary-bg-color: hsl(236, 26%, 16%);
   --main-color: hsl(35, 100%, 73%);
+  --secondary-color:hsl(234, 38%, 10%);
   --main-white-color: hsl(0, 0%, 100%);
   --transparent-color: transparent;
   --main-font-family: "Hanken Grotesk", sans-serif;
@@ -15,10 +17,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: var(--secondary-font-family);
+  font-family: var(--main-font-family);
 }
 body {
-  background-color: var(--main-bg-color);
+  background-color: var(--hover-secondary-bg-color);
   margin: 0;
 }
 /* Navbar */
@@ -26,6 +28,7 @@ header {
   display: flex;
   justify-content: space-between;
   position: sticky;
+  z-index: 10;
   top: 0;
   left: 0;
   right: 0;
@@ -212,15 +215,88 @@ section a.contact-btn {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
+  background-color: var(--main-color);
 }
-section a.contact-btn:hover {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
+/* About Section */
+section.about {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  height: calc(100vh-80px);
+}
+section .container {
+  width: 80%;
+  margin: auto;
+}
+.about-sections{
+  display: flex;
+  gap: 15px;
+  font-family: var(--main-font-family);
+  color: var(--main-white-color);
+}
+.about-me {
+  padding: 30px 20px 0px;/**/
+  width: 65%;/**/
+  background-color: var(--secondary-bg-color);
+}
+.about h2{
+  text-align: left;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  font-family: var(--secondary-font-family);
   color: var(--main-color);
-  background-color: var(--hover-bg-color);
+  font-size: 40px;
+  font-weight: 600;
+  margin-block-start: 0px;
+  margin-block-end: 25px;
+  line-height: 50px;
+  letter-spacing: 1px;
+}
+.about-me p, .skills li {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  margin-block-start: 0px;
+  margin-block-end: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+}
+.about-me p {
+  width: 100%;
+}
+.about .anchors-in-paragraph {
+  color: var(--main-color);
+  box-sizing: border-box;
+  font-weight: 600;
+}
+.skills{
+  width: 35%;
+  background-color: var(--secondary-bg-color);
+  padding: 30px 15px;
+}
+.skills ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.skills li {
+  font-size: 13px;
+  line-height: 28px;
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid var(--hover-secondary-bg-color);
+  background: var(--hover-secondary-bg-color);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.skills li span{
+  padding-inline-start: 4px;
+}
+.skills li i{
+  color:var(--main-color);
 }
 
 @media screen and (max-width: 380px) {
@@ -374,10 +450,60 @@ section a.contact-btn:hover {
     margin-block: 10px;
     padding: 15px 20px;
   }
-  
-
-
-
+  /* About Section */
+  section.about {
+    padding-top: 130px;
+    padding-bottom: 60px;
+    height: calc(100vh - 80px);
+  }
+  section.about .container {
+    width: 90%;
+    margin: auto;
+  }
+  .about-sections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .about-me {
+    padding: 20px 15px 15px;
+    width:100%;
+    margin: 0;
+    background-color: var(--secondary-bg-color);
+  }
+  .about h2{
+    padding-inline-start: 16px;
+    text-align: left;
+    font-size: 30px;
+    margin-block-start: 0px;
+    margin-block-end: 10px;
+    line-height: 45px;
+    letter-spacing: 1px;
+  }
+  .about-me p, .skills li {
+    font-size: 10px;
+    margin-block-start: 0px;
+    margin-block-end: 20px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+  }
+  .about-me p {
+    width: 100%;
+  }
+  .skills{
+    width: 100%;
+    margin: 0;
+    padding: 20px 15px 15px;
+  }
+  .skills li {
+    font-size: 13px;
+    padding: 8px;
+    margin: 5px;
+  }
+  .skills li span{
+    padding-inline-start: 4px;
+  }
 }
 @media screen and (min-width: 380px) and (max-width: 577px) {
   /* Navbar */
@@ -468,7 +594,7 @@ section a.contact-btn:hover {
   ul.nav-list li:last-child:hover {
     background-color: var(--transparent-color);
   }
-  /* Hero Section */
+  /* Home Section */
   section .container {
     padding-top: 5px;
     width: 70%;
@@ -527,6 +653,59 @@ section a.contact-btn:hover {
     margin-block: 30px;
     padding: 15px 20px;
   }
+  /* About Section */
+  section.about {
+    padding-top: 250px;
+    padding-bottom: 60px;
+  }
+  section.about .container {
+    width: 80%;
+    margin: auto;
+  }
+  .about-sections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .about-me {
+    padding: 20px 15px 15px;
+    width: 100%;
+    margin: auto;
+    background-color: var(--secondary-bg-color);
+  }
+  .about h2{
+    padding-inline-start: 16px;
+    text-align: left;
+    font-size: 30px;
+    margin-block-start: 0px;
+    margin-block-end: 25px;
+    line-height: 45px;
+    letter-spacing: 1px;
+  }
+  .about-me p, .skills li {
+    font-size: 12px;
+    margin-block-start: 0px;
+    margin-block-end: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+  }
+  .about-me p {
+    width: 100%;
+  }
+  .skills{
+    width: 100%;
+    margin: auto;
+    padding: 20px 15px 15px;
+  }
+  .skills li {
+    font-size: 13px;
+    padding: 8px;
+    margin: 5px;
+  }
+  .skills li span{
+    padding-inline-start: 4px;
+  }
 }
 @media screen and (min-width: 560px) and (max-width: 577px) {
     /* Navbar */
@@ -551,14 +730,13 @@ section a.contact-btn:hover {
 @media screen and (min-width: 578px) and (max-width: 630px) {
   /* Navbar */
   .logo span {
-    font-size: 25px;
+    font-size: 22px;
   }
   ul.nav-list li a {
-    font-size: 13px;
+    font-size: 12px;
   }
   ul.nav-list li:last-child a {
     padding: 4px 6px;
-    font-size: 12px;
     margin-inline: 0px;
     border: 1px solid var(--main-color);
     color: var(--main-color);
@@ -567,10 +745,27 @@ section a.contact-btn:hover {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    font-size: 15px;
   }
 }
-@media screen and (min-width: 577px) and (max-width: 900px) {
+@media screen and (min-width: 578px) and (max-width: 770px) {
+  /* Navbar */
+  .logo span {
+    font-size: 25px;
+  }
+  ul.nav-list li a {
+    font-size: 13px;
+  }
+  ul.nav-list li:last-child a {
+    padding: 4px 6px;
+    margin-inline: 0px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
   /* Hero Section */
   section .container {
     width: 80%;
@@ -624,6 +819,62 @@ section a.contact-btn:hover {
     margin-block: 30px;
     padding: 15px 20px;
   }
+  /* About Section */
+  section.about {
+    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    height: calc(100vh - 80px);
+  }
+  section.about .container {
+    width: 100%;
+    margin: auto;
+    padding-top: 50px;
+  }
+  .about-sections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .about-me {
+    padding: 20px 15px 15px;
+    width: 80%;
+    margin: auto;
+    background-color: var(--secondary-bg-color);
+  }
+  .about h2{
+    padding-inline-start: 10px;
+    text-align: left;
+    font-size: 30px;
+    margin-block-start: 0px;
+    margin-block-end: 10px;
+    line-height: 40px;
+    letter-spacing: 1px;
+  }
+  .about-me p, .skills li {
+    font-size: 12px;
+    margin-block-start: 0px;
+    margin-block-end: 15px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+  }
+  .about-me p {
+    width: 100%;
+  }
+  .skills{
+    width: 80%;
+    margin: auto;
+    padding: 20px 15px 15px;
+  }
+  .skills li {
+    font-size: 13px;
+    padding: 4px;
+    margin: 5px;
+  }
+  .skills li span{
+    padding-inline-start: 4px;
+  }
 }
 @media screen and (min-width: 770px) and (max-width: 1100px) {
   .home .top-title {
@@ -642,6 +893,108 @@ section a.contact-btn:hover {
     letter-spacing: 1px;
     width: 100%;
   }
+  /* About Section */
+  section.about {
+    padding-top: 0px;
+    padding-bottom: 60px;
+  }
+  section .container {
+    width: 85%;
+    margin: auto;
+  }
+  .about-sections{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-family: var(--main-font-family);
+    color: var(--main-white-color);
+  }
+  .about-me {
+    padding: 30px 20px 0px;
+    width: 65%;
+    background-color: var(--secondary-bg-color);
+  }
+  .about h2{
+    text-align: left;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    font-family: var(--secondary-font-family);
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: 600;
+    margin-block-start: 0px;
+    margin-block-end: 25px;
+    line-height: 40px;
+    letter-spacing: 1px;
+  }
+  .about-me p, .skills li {
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: justify;
+    margin-block-start: 0px;
+    margin-block-end: 15px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+  }
+  .about-me p {
+    width: 100%;
+  }
+  .about .anchors-in-paragraph {
+    color: var(--main-color);
+    box-sizing: border-box;
+    font-weight: 600;
+  }
+  .skills{
+    width: 35%;
+    background-color: var(--secondary-bg-color);
+    padding: 10px 5px;
+  }
+  .skills ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .skills li {
+    font-size: 13px;
+    line-height: 23px;
+    padding: 4px;
+    margin: 5px;
+  }
+  .skills li span{
+    padding-inline-start: 4px;
+  }
+  .skills li i{
+    color:var(--main-color);
+  }
+  /* Contact */
+  .contact .container {
+    padding-block: 50px 10px;
+  }
+  .contact-sections{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form{
+    width: 80%;
+    max-width: 466px;
+    margin: auto;
+  }
+  .contact-me {
+    height: 100%;
+    width:fit-content;
+    padding-top: 50px;
+    align-self: center;
+    padding-bottom: 10px;
+    justify-self: center;
+  }
+  .contact button {
+    font-size: 12px;
+    width: 30%;
+    padding: 10px;
+  }
+  
 }
 @media screen and (min-width: 1100px) and (max-width: 1220px) {
   .home .top-title {
@@ -660,4 +1013,13 @@ section a.contact-btn:hover {
     letter-spacing: 1px;
     width: 100%;
   }
+  button {
+    font-size: 12px;
+    width: 30%;
+    padding: 10px;
+  }
 }
+
+
+
+
