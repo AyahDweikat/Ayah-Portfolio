@@ -372,7 +372,7 @@ section .container {
   position: absolute;
   font-family: var(--main-font-family);
   font-size: 14px;
-  top: 15px;
+  top: 25px;
   left: 15px;
   color: #cabebe;
   display: block;
